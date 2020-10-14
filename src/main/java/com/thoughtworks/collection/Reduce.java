@@ -14,14 +14,10 @@ public class Reduce {
     }
 
     public double getAverage() {
-         int a = arrayList.stream().reduce((sum, current)->{
-            sum += current;
-            return sum;
-        }).get();
-         int size = arrayList.size();
-         double dSize = size;
-         double da = a;
-         return da/dSize;
+         return (double)(arrayList.stream().reduce((sum, current)->{
+             sum += current;
+             return sum;
+         }).get())/arrayList.size();
     }
 
     public Integer getMaxValue() {
